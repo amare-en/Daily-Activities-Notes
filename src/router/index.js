@@ -1,7 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'//define our ROUTING RULES
 import HomeView from '../views/HomeView.vue'
 import Calculater from '@/views/Calculater.vue'
-
+import Addnotes from '@/views/Addnotes.vue'
+import Quizes from '@/views/Quizes.vue'
+import Course from '@/components/Course.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -22,6 +24,24 @@ const router = createRouter({
       path: '/calculate',
       name: 'calculater',
       component:Calculater
+    },
+    {
+      path: '/quizes',
+      name: 'quizes',
+      component:Quizes
+    },
+
+        {
+      path: '/course/:id',
+      name: 'course',
+      component:Course
+    },
+
+
+ {
+      path: '/addnotes',
+      name: 'Addnotes',
+      component:Addnotes
     }
   ]
 })
